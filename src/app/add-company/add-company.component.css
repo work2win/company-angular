@@ -1,0 +1,19 @@
+.main{
+     /* Sticky & blur */
+     position: sticky;
+     margin-top: 10px;
+     margin-bottom: 0;
+     top: 0;
+     backdrop-filter: blur(10px);
+     
+     /* Layout */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 12px 50px;
+     background-color: rgb(151, 210, 238);
+     border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+     font-family: 'Raleway', sans-serif;
+     font-size: 16px;
+     color: rgb(102, 82, 82);
+}

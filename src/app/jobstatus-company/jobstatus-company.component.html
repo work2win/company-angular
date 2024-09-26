@@ -1,0 +1,39 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<div class="wrapper">
+ <div>
+    <mat-form-field class="matstyle">
+        <mat-label>Select a status</mat-label>
+        <mat-select [(ngModel)]="status" name="status" (selectionChange)="onChanged()">
+            <mat-option>None</mat-option>
+            <mat-option value="IN PROCESS">IN PROCESS</mat-option>
+            <mat-option value="CLOSED">CLOSED</mat-option>
+            <mat-option value="NOT HIRED AFTER INTERVIEW">NOT HIRED AFTER INTERVIEW</mat-option>                
+        </mat-select>
+    </mat-form-field>
+ </div>
+ <div class="main">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+                <th>ID</th>
+                <th>NAME</th>
+            <th>DATE & TIME</th>
+            <th>STATUS</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let comp of company">
+                <td>{{ comp.id }}</td>
+                <td>{{ comp.name }}</td>
+                <td>{{ comp.date }}</td>
+                <td>{{ comp.status }}</td>            
+            </tr>
+        </tbody>
+    </table>
+ </div>
+</div>
+
+ 

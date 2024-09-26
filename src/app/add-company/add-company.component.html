@@ -1,0 +1,17 @@
+<div class="main">
+    <form (ngSubmit) = "onSubmitAddCompany()">
+        <label for="id">ID</label>
+        <input type="number" id="id" [(ngModel)]="company.id" name="id">
+        <label for="name">Company name:</label>
+        <input type="text" id="name" [(ngModel)]="company.name" name="name">
+        <label for="date">Date</label>
+        <input type="date" id="date" [(ngModel)]="company.date" name="date">
+        <label for="status">Status:</label>        
+        <select type="text" id="status" [(ngModel)]="company.status" name="status">
+            <option value="IN PROCESS">IN PROCESS</option>
+            <option value="CLOSED">CLOSED</option>
+            <option value="NOT HIRED AFTER INTERVIEW">NOT HIRED AFTER INTERVIEW</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</div>
